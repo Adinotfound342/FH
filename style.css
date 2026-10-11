@@ -1,0 +1,54 @@
+:root{
+  --night:#1c2040; --deep:#2a2f5c; --moon:#f4eefc; --blush:#f0b7d1; --glow:#ffe9a8;
+  --hand:'Caveat','Segoe Script',cursive; --body:'Nunito',system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{
+  min-height:100vh; color:var(--moon); font-family:var(--body); line-height:1.7;
+  background:radial-gradient(circle at 80% 8%,#3b3f7a 0,transparent 40%),var(--night);
+  display:flex; justify-content:center; padding:48px 20px 80px;
+}
+main{width:100%; max-width:480px}
+.moon{width:64px;height:64px;border-radius:50%;background:var(--glow);
+  box-shadow:0 0 40px 8px rgba(255,233,168,.35); margin:0 0 28px;
+  -webkit-mask:radial-gradient(circle at 70% 30%,transparent 0 18px,#000 19px);
+          mask:radial-gradient(circle at 70% 30%,transparent 0 18px,#000 19px)}
+h1{font-family:var(--hand);font-size:3rem;line-height:1.1;margin:0 0 6px;font-weight:700}
+.sub{margin:0 0 28px;opacity:.75}
+.time{font-size:.8rem;opacity:.6;margin:0 0 8px}
+.bubble{background:var(--deep);border-radius:18px 18px 18px 4px;padding:10px 16px;margin:0 0 8px;width:fit-content;max-width:100%}
+.unseen{margin-bottom:28px}
+
+.btn{display:inline-block;font:inherit;font-weight:600;cursor:pointer;border:0;border-radius:999px;
+  padding:12px 22px;background:var(--blush);color:var(--night);text-decoration:none;transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn.ghost{background:transparent;color:var(--moon);border:1.5px solid var(--blush)}
+.btn:focus-visible,.back:focus-visible{outline:3px solid var(--glow);outline-offset:3px}
+.back{display:inline-block;color:var(--moon);opacity:.7;margin-bottom:24px;text-decoration:none}
+
+.letter{background:var(--moon);color:var(--night);border-radius:20px;padding:28px 26px;margin-bottom:28px}
+.letter p{margin:0 0 14px}
+.letter .sign{font-family:var(--hand);font-size:1.7rem;margin:18px 0 0}
+.letter p.hide{opacity:0;transform:translateY(10px)}
+.letter p{transition:opacity .6s ease,transform .6s ease}
+
+.plan{list-style:none;padding:0;margin:0 0 32px}
+.plan li{border-left:3px solid var(--blush);padding:2px 0 2px 16px;margin-bottom:18px}
+.plan strong{display:block;font-family:var(--hand);font-size:1.6rem;line-height:1.2}
+
+.actions{display:flex;gap:10px;flex-wrap:wrap}
+#reply{min-height:2em;margin-top:18px;font-family:var(--hand);font-size:1.6rem}
+
+body.leaving main{opacity:0;transition:opacity .35s ease}
+@media (prefers-reduced-motion:reduce){
+  .btn,.letter p,body.leaving main{transition:none}
+}
+
+/* Reply page */
+.quick{margin-bottom:32px}
+.own{display:block;font-family:var(--hand);font-size:1.5rem;margin-bottom:8px}
+textarea{width:100%;font:inherit;color:var(--moon);background:var(--deep);border:1.5px solid transparent;
+  border-radius:16px;padding:14px 16px;margin-bottom:14px;resize:vertical}
+textarea:focus-visible{outline:3px solid var(--glow);outline-offset:2px}
+.goodnight{margin-top:40px;font-family:var(--hand);font-size:1.8rem;text-align:center;opacity:.9}

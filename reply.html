@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<title>Your turn</title>
+</head>
+<body>
+<main>
+  <a class="back" href="plan.html" data-fade>Back</a>
+  <div class="moon" aria-hidden="true"></div>
+  <h1>Your turn</h1>
+  <p class="sub">Tap one, or write your own. It opens a chat with me, and you can still change it before sending.</p>
+
+  <div class="actions quick">
+    <button class="btn ghost" data-send="I'm awake, come talk to me 🌙">I'm up, talk to me</button>
+    <button class="btn ghost" data-send="No worries, I understand 🫶">No worries</button>
+    <button class="btn ghost" data-send="Let's talk tomorrow evening?">Tomorrow evening?</button>
+    <button class="btn ghost" data-send="Selfie next time, don't forget 📸">Selfie next time</button>
+  </div>
+
+  <label class="own" for="own">Or write your own</label>
+  <textarea id="own" rows="4" placeholder="Anything, big or small..."></textarea>
+  <button class="btn" id="send-own">Send to me</button>
+
+  <p class="goodnight">🤍 Always loving uh, Mahi 🤍</p>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
